@@ -1,0 +1,108 @@
+:root {
+  --bg-color: #fdfdfd;
+  --text-color: #000000;
+  --main-color: #FF9800;
+  --white-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.dark-mode .certifications {
+  background: var(--shadow-color);
+  color: var(--white-color);
+}
+
+.certifications {
+  padding: 100px 20px 20px;
+  text-align: center;
+  background: var(--bg-color);
+  transition: background 0.5s ease, color 0.5s ease;
+  color: var(--text-color);
+}
+
+.certifications h1 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.dark-mode .certifications h1 {
+  color: var(--white-color);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  height: calc(100vh - 160px);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--main-color), var(--shadow-color));
+  border-radius: 15px;
+  color: var(--white-color);
+  text-align: center;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--white-color);
+  transition: color 0.3s ease;
+}
+
+.card p {
+  font-size: 1rem;
+  color: var(--white-color);
+  transition: color 0.3s ease;
+}
+
+.dark-mode .card {
+  background: linear-gradient(135deg, var(--shadow-color), var(--main-color));
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .card h2,
+.dark-mode .card p {
+  color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
