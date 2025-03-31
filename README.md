@@ -1,5 +1,7 @@
 # Portfolio Website
 
+![Portfolio Screenshot](images/screenshot.jpg)
+
 Welcome to my portfolio website! This website showcases my skills, projects, and experience as a full-stack developer.
 
 ## Live Website
